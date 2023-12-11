@@ -1,0 +1,29 @@
+<% layout('layout/boilerplate') -%>;
+
+<div  class="cont" width="600px" height="500px">
+    <img src="<%=student.img%>" width="150px" alt="" style="border-radius: 50%;">
+    <div class="info">
+        <br>
+        <h3><b><%=student.name %></b></h3>
+        <h4><%=student.address%></h4>
+        <h4><%=student.course%> <%=student.branch%></h4>
+        <h4><%=student.year%>rd Year</h4>
+        <br>
+        <a href="/students/<%=student._id%>/edit" class="btn btn-primary">Edit</a>
+        
+
+    </div>
+    <div class="skills">
+        <br>
+        <p><b>Current CPI: </b><%=student.cpi%> </p>
+        
+        <p><b>Core Skills: </b><%=student.core_skills%></p>   
+        <br>
+        <div class="coding">
+            <p><b>Platform link: </b><%=student.coding_link%></p>
+            <button class="btn" style="background: green; border-radius: 8px; margin-left: 10px;" ><a href="<%=student.coding_link%>" style="color: aliceblue; font-style: normal; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Check Profile</a></button>
+        </div>
+        <br>
+        <p><b>Certifications: </b><%=student.certifications%></p>
+    </div>
+</div>
